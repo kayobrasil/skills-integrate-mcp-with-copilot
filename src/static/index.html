@@ -8,9 +8,33 @@
   </head>
   <body>
     <header>
+      <button id="user-menu-button" class="icon-button" aria-label="Teacher access">
+        👤
+      </button>
       <h1>Mergington High School</h1>
       <h2>Extracurricular Activities</h2>
+      <p id="teacher-status" class="status-pill">Student View</p>
     </header>
+
+    <div id="login-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="login-title">
+      <div class="modal-card">
+        <h3 id="login-title">Teacher Login</h3>
+        <form id="teacher-login-form">
+          <div class="form-group">
+            <label for="teacher-username">Username:</label>
+            <input type="text" id="teacher-username" required placeholder="teacher.alex" />
+          </div>
+          <div class="form-group">
+            <label for="teacher-password">Password:</label>
+            <input type="password" id="teacher-password" required placeholder="Password" />
+          </div>
+          <div class="modal-actions">
+            <button type="submit">Login</button>
+            <button type="button" id="close-login-modal" class="secondary-button">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <main>
       <section id="activities-container">
@@ -23,6 +47,9 @@
 
       <section id="signup-container">
         <h3>Sign Up for an Activity</h3>
+        <p id="teacher-only-message" class="info-message">
+          Teacher login is required to register or unregister students.
+        </p>
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
@@ -37,6 +64,7 @@
           </div>
           <button type="submit">Sign Up</button>
         </form>
+        <button id="logout-button" class="secondary-button hidden" type="button">Logout Teacher</button>
         <div id="message" class="hidden"></div>
       </section>
     </main>
