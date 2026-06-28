@@ -16,12 +16,41 @@ body {
 }
 
 header {
+  position: relative;
   text-align: center;
   padding: 20px 0;
   margin-bottom: 30px;
   background-color: #1a237e;
   color: white;
   border-radius: 5px;
+}
+
+.icon-button {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  line-height: 1;
+  padding: 0;
+}
+
+.icon-button:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.status-pill {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 14px;
 }
 
 header h1 {
@@ -162,6 +191,48 @@ button {
 
 button:hover {
   background-color: #3949ab;
+}
+
+.secondary-button {
+  background-color: #546e7a;
+}
+
+.secondary-button:hover {
+  background-color: #455a64;
+}
+
+.info-message {
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #e3f2fd;
+  border: 1px solid #90caf9;
+  color: #0d47a1;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 1000;
+}
+
+.modal-card {
+  width: min(420px, 100%);
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
 }
 
 .message {
